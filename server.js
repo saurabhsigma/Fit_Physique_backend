@@ -11,11 +11,10 @@ const jwt = require('jsonwebtoken')
 const Razorpay = require('razorpay');
 const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk'
  
+require.dotenv().config();
+mongoose.connect(`mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASS}@fit-physique.glqfmh0.mongodb.net/login-db`)
 
-mongoose.connect('mongodb://localhost:27017/login-app-db', {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-})
+
 
 app.use(bodyParser.json());
 app.use(express.json());
