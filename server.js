@@ -32,7 +32,7 @@ app.get('/register', (req, res) => {
   res.sendFile('register.html',{root:__dirname });
 });
 
-app.get('/login',(req, res) => {
+app.get('/Fit_Physique/login',(req, res) => {
   res.sendFile('login.html',{root:__dirname });
 });
 
